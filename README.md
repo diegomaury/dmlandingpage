@@ -1,46 +1,36 @@
-# [Tailwind Toolbox](https://www.tailwindtoolbox.com/) - [Rainblur Landing Page Template](https://www.tailwindtoolbox.com/templates/rainblur-landing-page)
-
-[Rainblur Landing Page](https://www.tailwindtoolbox.com/templates/rainblur-landing-page) is an open source, dark mode and gradient based generic landing page or coming soon template for [Tailwind CSS](https://tailwindcss.com/) created by [Tailwind Toolbox](https://www.tailwindtoolbox.com/).
-
-![Rainblur Landing Page](https://www.tailwindtoolbox.com/templates/rainblur-landing-page.png)
 
 
-## Getting Started
+# **Landing Page de Diego Maury**  
 
-Choose one of the following options to get started:
-* [Download the latest release](https://github.com/tailwindtoolbox/Rainblur-Landing-Page/archive/main.zip)
-* Clone the repo: `git clone https://github.com/tailwindtoolbox/Rainblur-Landing-Page.git`
-* Fork the repo
+Bienvenido al repositorio de mi landing page personal. Este proyecto fue diseñado para ofrecer una vista clara y atractiva de quién soy, qué hago y cómo puedes conectarte conmigo.  
 
-## Using the Template
+## **¿Qué es esta landing page?**  
 
-The template is just a HTML file using a full CDN hosted Tailwind CSS file.
+Esta es una página web estática creada para:  
+- Mostrar mi perfil profesional, destacando mis habilidades y experiencia en **emprendimiento**, **innovación**, y **gestión de proyectos**.  
+- Facilitar el acceso a mis redes sociales, blog y otros recursos relevantes relacionados con mi carrera.  
+- Servir como un espacio centralizado donde las personas puedan aprender más sobre mí y ponerse en contacto conmigo fácilmente.  
 
-To get the best out of Tailwind CSS, you need to really start customising it.
-Take a look at our [setup guide](https://www.tailwindtoolbox.com/setup) to start tweaking!
+## **¿Por qué la hice?**  
 
-## Sites created using this template
+La razón principal detrás de esta landing page es:  
+1. **Consolidar mi marca personal**: Una presencia digital bien estructurada es clave para destacar en un entorno profesional competitivo.  
+2. **Facilitar conexiones**: Ofrecer enlaces directos a mi correo, redes sociales, y herramientas como mi calendario de reservas y portafolio.  
+3. **Inspirar y motivar**: Mi objetivo es transmitir mi pasión por el **emprendimiento** y la **innovación**, mostrando que es posible causar un impacto positivo.  
+4. **Crear comunidad**: Ofrezco recursos, talleres y conferencias con el fin de conectar con otros apasionados del emprendimiento y la tecnología.  
 
-* Add your site here :)
+## **Tecnologías utilizadas**  
 
+- **HTML**: Estructura básica de la página.  
+- **Tailwind CSS**: Framework para el diseño moderno y responsivo.  
+- **JavaScript (Opcional)**: Para futuras funcionalidades dinámicas.  
 
-## Bugs and Issues
+## **Características principales**  
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/tailwindtoolbox/Rainblur-Landing-Page//issues/new) here on GitHub.
+- **Diseño responsivo**: Adaptado para que se vea bien tanto en dispositivos móviles como en escritorio.  
+- **Integración de enlaces**: Acceso directo a mis redes sociales, blog, portafolio y más.  
+- **Minimalismo funcional**: Interfaz limpia y profesional que destaca lo más importante.  
 
-## Creator
+## **¿Cómo verla en acción?**  
 
-[Tailwind Toolbox](https://www.tailwindtoolbox.com/) was created by and is maintained by **[Amrit Nagi](https://amritnagi.info/)**, Co-owner of [Astrava.Solutions](https://astrava.solutions).
-
-* https://twitter.com/tailwindtoolbox
-* https://twitter.com/amritnagi
-* https://github.com/tailwindtoolbox
-
-Tailwind Toolbox is based on the [Tailwind CSS](https://www.tailwindcss.com/) framework created by [Adam Wathan](https://twitter.com/adamwathan), [Jonathan Reinink](https://twitter.com/reinink), [David Hemphill](https://twitter.com/davidhemphill) and [Steve Schoger](https://twitter.com/steveschoger)
-
-
-
-
-## Copyright and License
-
-Copyright 2018-2020 Astrava.Solutions Ltd. Code released under the MIT license.
+La página está disponible en [https://diegomaury.mx](https://diegomaury.mx)  
