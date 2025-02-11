@@ -1,5 +1,11 @@
 {
+  "scripts": {
+    "build:css": "postcss src/tailwind.css -o dist/tailwind.css"
+  },
   "devDependencies": {
-    "tailwindcss": "^3.4.4"
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.2.19",
+    "autoprefixer": "^10.4.0"
   }
 }
