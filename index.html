@@ -10,6 +10,9 @@
     <meta name="robots" content="index, follow">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+    <!-- Preload imagen principal para mejor performance -->
+    <link rel="preload" href="dmperfill.svg" as="image">
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -21,6 +24,7 @@
     <!-- TailwindCSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital@1&family=Inter&family=Outfit:wght@700&display=swap" rel="stylesheet">
+    
     <style>
         body {
             background-color: #F0F0F0;
@@ -38,6 +42,110 @@
             font-family: 'Outfit', sans-serif;
             font-weight: 700;
             color: #4b2672;
+        }
+
+        /* MEJORAS RESPONSIVE INTEGRADAS */
+        
+        /* Grid de iconos optimizado */
+        .icon-grid {
+            display: grid;
+            gap: 0.75rem;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 1rem;
+        }
+
+        /* Imágenes responsive con tamaños adaptativos */
+        .icon-grid img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .icon-grid a:hover img {
+            transform: scale(1.08);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Imagen de perfil responsive */
+        .profile-image {
+            width: 160px;
+            height: 160px;
+            max-width: 70vw;
+            max-height: 70vw;
+            object-fit: cover;
+        }
+
+        /* Media queries para diferentes dispositivos */
+        @media (max-width: 480px) {
+            .icon-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
+                padding: 0.75rem;
+            }
+            
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        @media (min-width: 481px) and (max-width: 768px) {
+            .icon-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+            
+            .profile-image {
+                width: 140px;
+                height: 140px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .icon-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+                padding: 1.5rem;
+            }
+            
+            .profile-image {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .icon-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        /* Container principal responsive */
+        .main-container {
+            min-height: 100vh;
+            padding: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .main-container {
+                padding: 2rem;
+            }
+        }
+
+        /* Mejora de texto responsive */
+        .responsive-text {
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .responsive-text {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
         }
     </style>
 
@@ -60,54 +168,192 @@
 </head>
 
 <body class="leading-normal tracking-normal bg-cover bg-fixed min-h-screen flex flex-col" style="background-image: url('header2.svg');">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2WW6WM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div class="flex-grow">
         <!-- Main content -->
-        <div class="container pt-3 md:pt-5 mx-auto text-indigo-400 flex flex-wrap flex-col md:flex-row items-center">
-            <!-- Left Column -->
-<!-- Left Column -->
-<div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
-    <div class="text-center mb-6">
-        <img src="dmperfill.svg" alt="Diego Maury" class="rounded-full border-4 border-white shadow-lg transform hover:scale-105 hover:shadow-xl transition duration-300 scale-75" loading="lazy">
-    </div>
-    <h1 class="my-4 text-3xl md:text-5xl font-bold leading-tight text-center md:text-left" style="color: #4b2672;">
-        Diego Maury
-    </h1>
-    <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left" style="color: #4b2672;">
-        Emprendedor. Coordinador. Habilitador.
-    </p>
+        <main class="main-container" role="main">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
+                    
+                    <!-- Left Column - Información Personal -->
+                    <section class="flex flex-col w-full lg:w-2/5 text-center lg:text-left" aria-label="Información personal">
+                        <div class="mb-6">
+                            <img src="dmperfill.svg" 
+                                 alt="Diego Maury - Emprendedor y Gestor de Proyectos" 
+                                 class="profile-image rounded-full border-4 border-white shadow-lg 
+                                        hover:scale-105 hover:shadow-xl transition duration-300 mx-auto lg:mx-0"
+                                 loading="eager"
+                                 decoding="async">
+                        </div>
+                        
+                        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold 
+                                   leading-tight mb-4" 
+                            style="color: #4b2672;">
+                            Diego Maury
+                        </h1>
+                        
+                        <p class="text-lg sm:text-xl md:text-2xl mb-6 font-medium" 
+                           style="color: #4b2672;">
+                            Emprendedor. Coordinador. Habilitador.
+                        </p>
 
-    <div class="container">
-        <p class="text-lg md:text-xl text-center md:text-left mb-8" style="color: #4b2672;">
-            Emprendedor apasionado y comprometido con la innovación y el servicio. Coordinador y gestor de proyectos de alto impacto y habilitador de entornos de innovación. ¡Hagamos que las cosas pasen!
-        </p>
-    </div>
-</div>
+                        <div class="max-w-2xl lg:max-w-none">
+                            <p class="responsive-text text-base sm:text-lg md:text-xl" 
+                               style="color: #4b2672;">
+                                Emprendedor apasionado y comprometido con la innovación y el servicio. 
+                                Coordinador y gestor de proyectos de alto impacto y habilitador de 
+                                entornos de innovación. ¡Hagamos que las cosas pasen!
+                            </p>
+                        </div>
+                    </section>
 
-            <!-- Right Column -->
-            <div class="w-full xl:w-3/5 p-12 overflow-hidden">
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 justify-center">
-                    <a href="https://diegomaury.notion.site/portfolio?pvs=4" target="_blank" rel="noopener" class="transform hover:scale-110 hover:shadow-[0_0_10px_rgba(255,255,255,0.7)] transition duration-300 ease-in-out"><img src="Read.cv.webp" alt="Curriculum y Portafolio de Diego Maury" class="w-44 h-44"></a>
-                    <a href="https://calendar.notion.so/meet/diego-snkz71z4g/d73c14p5v" target="_blank" rel="noopener" class="transform hover:scale-110 hover:shadow-[0_0_10px_rgba(255,255,255,0.7)] transition duration-300 ease-in-out"><img src="1.webp" alt="Calendario de Reservas de Diego Maury" class="w-44 h-44"></a>
-                    <a href="mailto:dm@diegomaury.mx" target="_blank" rel="noopener" class="transform hover:scale-110 hover:shadow-[0_0_10px_rgba(255,255,255,0.7)] transition duration-300 ease-in-out"><img src="Email.webp" alt="Email de Diego Maury" class="w-44 h-44"></a>
-                    <a href="https://diegomaury.notion.site/Ponencias-y-Talleres-2025-349c84ac67844da695b3b5fbd9e6d853?pvs=4" target="_blank" rel="noopener" class="transform hover:scale-110 hover:shadow-[0_0_10px_rgba(255,255,255,0.7)] transition duration-300 ease-in-out"><img src="Conferencias y Talleres.webp" alt="Conferencias y Talleres de Diego Maury" class="w-44 h-44"></a>
-                    <a href="https://diegomaury.substack.com/" target="_blank" rel="noopener" class="transform hover:scale-110 hover:shadow-[0_0_10px_rgba(255,255,255,0.7)] transition duration-300 ease-in-out"><img src="diegomaury substack blog.svg" alt="Substack y Blog de Diego Maury" class="w-44 h-44"></a>
-                    <a href="https://senja.io/p/diegomaury/9awUK8" target="_blank" rel="noopener" class="transform hover:scale-110 hover:shadow-[0_0_10px_rgba(255,255,255,0.7)] transition duration-300 ease-in-out"><img src="2.webp" alt="Comentarios sobre Diego Maury" class="w-44 h-44"></a>
-                    <a href="https://www.linkedin.com/in/diegomaury" target="_blank" rel="noopener" class="transform hover:scale-110 hover:shadow-[0_0_10px_rgba(255,255,255,0.7)] transition duration-300 ease-in-out"><img src="LinkedIn.webp" alt="LinkedIn de Diego Maury" class="w-44 h-44"></a>
-                    <a href="https://buymeacoffee.com/diegomaury.mx" target="_blank" rel="noopener" class="transform hover:scale-110 hover:shadow-[0_0_10px_rgba(255,255,255,0.7)] transition duration-300 ease-in-out"><img src="Buy me a coffee.webp" alt="Buy Me a Coffee de Diego Maury" class="w-44 h-44"></a>
-                    <a href="https://www.instagram.com/diegomaury.mx" target="_blank" rel="noopener" class="transform hover:scale-110 hover:shadow-[0_0_10px_rgba(255,255,255,0.7)] transition duration-300 ease-in-out"><img src="Instagram.webp" alt="Instagram de Diego Maury" class="w-44 h-44"></a>
-                    <a href="https://www.tiktok.com/@diegomaury.mx" target="_blank" rel="noopener" class="transform hover:scale-110 hover:shadow-[0_0_10px_rgba(255,255,255,0.7)] transition duration-300 ease-in-out"><img src="TikTok.webp" alt="TikTok de Diego Maury" class="w-44 h-44"></a>
+                    <!-- Right Column - Grid de Enlaces -->
+                    <section class="w-full lg:w-3/5" aria-label="Enlaces profesionales y redes sociales">
+                        <nav class="icon-grid" aria-label="Navegación de redes sociales y servicios">
+                            <a href="https://diegomaury.notion.site/portfolio?pvs=4" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
+                               aria-label="Ver curriculum y portafolio de Diego Maury">
+                                <img src="Read.cv.webp" 
+                                     alt="Curriculum y Portafolio"
+                                     loading="lazy"
+                                     decoding="async">
+                            </a>
+                            
+                            <a href="https://calendar.notion.so/meet/diego-snkz71z4g/d73c14p5v" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
+                               aria-label="Agendar una reunión con Diego Maury">
+                                <img src="1.webp" 
+                                     alt="Calendario de Reservas"
+                                     loading="lazy"
+                                     decoding="async">
+                            </a>
+                            
+                            <a href="mailto:dm@diegomaury.mx" 
+                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
+                               aria-label="Enviar email a Diego Maury">
+                                <img src="Email.webp" 
+                                     alt="Contacto por Email"
+                                     loading="lazy"
+                                     decoding="async">
+                            </a>
+                            
+                            <a href="https://diegomaury.notion.site/Ponencias-y-Talleres-2025-349c84ac67844da695b3b5fbd9e6d853?pvs=4" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
+                               aria-label="Ver conferencias y talleres disponibles">
+                                <img src="Conferencias y Talleres.webp" 
+                                     alt="Conferencias y Talleres"
+                                     loading="lazy"
+                                     decoding="async">
+                            </a>
+                            
+                            <a href="https://diegomaury.substack.com/" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
+                               aria-label="Leer el blog de Diego Maury en Substack">
+                                <img src="diegomaury substack blog.svg" 
+                                     alt="Blog en Substack"
+                                     loading="lazy"
+                                     decoding="async">
+                            </a>
+                            
+                            <a href="https://senja.io/p/diegomaury/9awUK8" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
+                               aria-label="Ver testimonios y comentarios sobre Diego Maury">
+                                <img src="2.webp" 
+                                     alt="Testimonios y Comentarios"
+                                     loading="lazy"
+                                     decoding="async">
+                            </a>
+                            
+                            <a href="https://www.linkedin.com/in/diegomaury" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
+                               aria-label="Conectar con Diego Maury en LinkedIn">
+                                <img src="LinkedIn.webp" 
+                                     alt="Perfil de LinkedIn"
+                                     loading="lazy"
+                                     decoding="async">
+                            </a>
+                            
+                            <a href="https://buymeacoffee.com/diegomaury.mx" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
+                               aria-label="Apoyar a Diego Maury comprando un café">
+                                <img src="Buy me a coffee.webp" 
+                                     alt="Buy Me a Coffee"
+                                     loading="lazy"
+                                     decoding="async">
+                            </a>
+                            
+                            <a href="https://www.instagram.com/diegomaury.mx" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
+                               aria-label="Seguir a Diego Maury en Instagram">
+                                <img src="Instagram.webp" 
+                                     alt="Perfil de Instagram"
+                                     loading="lazy"
+                                     decoding="async">
+                            </a>
+                            
+                            <a href="https://www.tiktok.com/@diegomaury.mx" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
+                               aria-label="Seguir a Diego Maury en TikTok">
+                                <img src="TikTok.webp" 
+                                     alt="Perfil de TikTok"
+                                     loading="lazy"
+                                     decoding="async">
+                            </a>
+                        </nav>
+                    </section>
                 </div>
             </div>
-        </div>
+        </main>
     </div>
 
     <!-- Footer -->
-<footer class="bg-transparent w-full max-w-7xl mx-auto text-center py-4 mt-12">
-    <p class="text-[#4b2672]">Página hecha con mucho pasión y ChatGPT.</p>
-    <p class="text-[#4b2672]">© <span id="currentYear"></span> DIEGO SONDHEIM LUPONE SAS. Todos los derechos reservados.</p>
-</footer>
+    <footer class="bg-transparent w-full max-w-7xl mx-auto text-center py-4 mt-8 sm:mt-12 px-4">
+        <p class="text-sm sm:text-base mb-2" style="color: #4b2672;">
+            Página hecha con mucho pasión y ChatGPT.
+        </p>
+        <p class="text-xs sm:text-sm" style="color: #4b2672;">
+            © <span id="currentYear"></span> DIEGO SONDHEIM LUPONE SAS. Todos los derechos reservados.
+        </p>
+    </footer>
 
-<script>
-    // Obtener el año actual y actualizar el contenido del span
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
-</script>
+    <script>
+        // Obtener el año actual y actualizar el contenido del span
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+        
+        // Mejorar performance de hover en dispositivos táctiles
+        if ('ontouchstart' in window) {
+            document.querySelectorAll('.icon-grid a').forEach(link => {
+                link.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(1.05)';
+                }, {passive: true});
+                
+                link.addEventListener('touchend', function() {
+                    this.style.transform = 'scale(1)';
+                }, {passive: true});
+            });
+        }
+    </script>
+</body>
+</html>
