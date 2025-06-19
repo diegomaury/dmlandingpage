@@ -1,11 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './**/*.html',  // Paths to your HTML files
-    './**/*.js',    // Paths to your JS files
+    './*.html',
+    './**/*.html',
+    './**/*.js'
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        outfit: ['Outfit', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        serifpro: ['Source Serif Pro', 'serif'],
+      },
+      colors: {
+        catalyst: '#4b2672',
+        primary: '#246BFD'
+      },
+    },
   },
   plugins: [],
 }
