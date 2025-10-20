@@ -1,11 +1,14 @@
 {
   "scripts": {
-    "build:css": "postcss src/tailwind.css -o dist/tailwind.css"
+    "build:css": "postcss src/tailwind.css -o dist/tailwind.css",
+    "test": "jest"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.2.19",
-    "autoprefixer": "^10.4.0"
+    "autoprefixer": "^10.4.0",
+    "jest": "^29.7.0",
+    "jsdom": "^24.0.0"
   }
 }
