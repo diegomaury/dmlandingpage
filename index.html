@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Diego Maury</title>
-    <meta name="description" content="Diego Maury: Emprendedor y gestor de proyectos en México. Experto en innovación, tecnología y impacto social. Crea soluciones disruptivas con alto impacto.">
-    <meta name="keywords" content="Diego Maury, innovación, emprendimiento, impacto social, gestor de proyectos, tecnología, soluciones disruptivas, Notion, community builder, innovación México">
+    <title>Diego Maury — Strategic Program &amp; Innovation Manager</title>
+    <meta name="description" content="Diego Maury: Strategic Program &amp; Innovation Manager. Diseño y opero sistemas de innovación: programas, ecosistemas y plataformas de alto impacto en México.">
+    <meta name="keywords" content="Diego Maury, innovación, Strategic Program Manager, Innovation Systems Builder, ecosistemas de innovación, programas de aceleración, consultoría innovación México">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.diegomaury.mx/">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <!-- Preload imagen principal para mejor performance -->
+    <!-- Open Graph -->
+    <meta property="og:title" content="Diego Maury — Strategic Program &amp; Innovation Manager">
+    <meta property="og:description" content="Diseño y opero sistemas de innovación: programas, ecosistemas y plataformas. Portfolio como evidencia de sistemas construidos.">
+    <meta property="og:url" content="https://www.diegomaury.mx/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.diegomaury.mx/dmperfill.svg">
+
     <link rel="preload" href="dmperfill.svg" as="image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -25,142 +32,495 @@
 
     <!-- TailwindCSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital@1&family=Inter&family=Outfit:wght@700&display=swap" rel="stylesheet">
-    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-</noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital@1&family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
 
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital@1&family=Inter&family=Outfit:wght@700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital@1&family=Inter&family=Outfit:wght@700&display=swap" rel="stylesheet">
-</noscript>
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="ZlBRJNkQlWX1uSys6LFetw" async></script>
+
     <style>
-        body {
-            background-color: #F0F0F0;
-            color: #4b2672; /* Catalyst Purple */
+        /* ── Base ── */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root {
+            --purple:       #4b2672;
+            --purple-dark:  #36185a;
+            --purple-light: #f3eeff;
+            --blue:         #246BFD;
+            --text:         #1a1225;
+            --muted:        #6b7280;
+            --bg:           #f8f7fc;
+            --white:        #ffffff;
+            --border:       #e5e0f0;
         }
-           .main-container {
-        min-height: 100vh;
-        padding: 1rem;
-    }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+        }
         .headline {
             font-family: 'Source Serif Pro', serif;
             font-style: italic;
         }
-        .quote {
-            font-family: 'Inter', sans-serif;
-            color: #246BFD;
+
+        /* ── Nav ── */
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
         }
-        .title {
+        .nav-logo {
             font-family: 'Outfit', sans-serif;
             font-weight: 700;
-            color: #4b2672;
+            color: var(--purple);
+            font-size: 1.1rem;
+            text-decoration: none;
         }
-
-        /* MEJORAS RESPONSIVE INTEGRADAS */
-        
-        /* Grid de iconos optimizado */
-        .icon-grid {
-            display: grid;
-            gap: 0.75rem;
-            grid-template-columns: repeat(3, 1fr);
-            padding: 1rem;
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
         }
-
-        /* Imágenes responsive con tamaños adaptativos */
-        .icon-grid img {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1;
-            object-fit: cover;
-            border-radius: 0.5rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .nav-links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
         }
-
-        .icon-grid a:hover img {
-            transform: scale(1.08);
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        .nav-links a:hover { color: var(--purple); }
+        .nav-cta {
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.4rem 0.9rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.2s;
         }
-
-        /* Imagen de perfil responsive */
-        .profile-image {
-            width: 160px;
-            height: 160px;
-            max-width: 70vw;
-            max-height: 70vw;
-            object-fit: cover;
+        .nav-cta:hover { opacity: 0.85; }
+        .nav-cta-hiring {
+            background: var(--purple);
+            color: var(--white);
         }
-
-        /* Media queries para diferentes dispositivos */
-        @media (max-width: 480px) {
-            .icon-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 0.5rem;
-                padding: 0.75rem;
-            }
-            
-            .profile-image {
-                width: 120px;
-                height: 120px;
-            }
+        .nav-cta-consulting {
+            border: 1.5px solid var(--purple);
+            color: var(--purple);
+            margin-left: 0.25rem;
         }
-
-        @media (min-width: 481px) and (max-width: 768px) {
-            .icon-grid {
-                grid-template-columns: repeat(3, 1fr);
+        .nav-hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.25rem;
+        }
+        @media (max-width: 767px) {
+            .nav-links { display: none; }
+            .nav-hamburger { display: block; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 56px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                border-bottom: 1px solid var(--border);
+                padding: 1rem 1.5rem 1.5rem;
                 gap: 1rem;
-            }
-            
-            .profile-image {
-                width: 140px;
-                height: 140px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             }
         }
 
-        @media (min-width: 769px) {
-            .icon-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 1.5rem;
-                padding: 1.5rem;
-            }
-            
-            .profile-image {
-                width: 180px;
-                height: 180px;
-            }
+        /* ── Hero (purple header — ~18% of viewport) ── */
+        .hero {
+            background: var(--purple);
+            color: var(--white);
+            padding: 3rem 1.5rem 3.5rem;
+        }
+        .hero-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1.25rem;
+        }
+        .hero-avatar {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            border: 3px solid rgba(255,255,255,0.4);
+            object-fit: cover;
+        }
+        .hero-name {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--white);
+            margin: 0;
+            line-height: 1.1;
+        }
+        .hero-role {
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            color: rgba(255,255,255,0.75);
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        .hero-statement {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            color: rgba(255,255,255,0.9);
+            max-width: 600px;
+            line-height: 1.65;
+            margin: 0;
+        }
+        .hero-ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.7rem 1.4rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .cta-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.18); }
+        .cta-hiring {
+            background: var(--white);
+            color: var(--purple);
+        }
+        .cta-consulting {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.6);
+        }
+        .track-label {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.2rem 0.55rem;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+        .track-hiring-label { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.85); }
+        .track-consulting-label { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); }
+
+        /* ── Section base ── */
+        section { padding: 4rem 1.5rem; }
+        .section-inner { max-width: 900px; margin: 0 auto; }
+        .section-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--purple);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .section-title {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            color: var(--purple);
+            margin: 0 0 1rem;
+            line-height: 1.2;
+        }
+        .section-divider {
+            width: 48px;
+            height: 3px;
+            background: var(--purple);
+            margin: 0 0 1.5rem;
+            border-radius: 2px;
         }
 
-        @media (min-width: 1024px) {
-            .icon-grid {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 1.5rem;
-            }
+        /* ── Statement ── */
+        .statement-section { background: var(--white); }
+        .statement-quote {
+            font-family: 'Source Serif Pro', serif;
+            font-style: italic;
+            font-size: clamp(1.25rem, 3vw, 1.65rem);
+            color: var(--purple);
+            line-height: 1.55;
+            border-left: 4px solid var(--purple);
+            padding-left: 1.25rem;
+            margin: 0 0 2rem;
+        }
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .problem-card {
+            background: var(--purple-light);
+            border-radius: 10px;
+            padding: 1rem 1.1rem;
+        }
+        .problem-card h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--purple);
+            margin: 0 0 0.35rem;
+        }
+        .problem-card p {
+            font-size: 0.9rem;
+            color: var(--text);
+            margin: 0;
+            line-height: 1.5;
         }
 
-        /* Container principal responsive */
-        .main-container {
-            min-height: 100vh;
-            padding: 1rem;
+        /* ── Case Studies ── */
+        .projects-section { background: var(--bg); }
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .case-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            transition: box-shadow 0.25s, transform 0.25s;
+        }
+        .case-card:hover {
+            box-shadow: 0 6px 24px rgba(75,38,114,0.12);
+            transform: translateY(-2px);
+        }
+        .case-tag {
+            display: inline-block;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            background: var(--purple-light);
+            color: var(--purple);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            align-self: flex-start;
+        }
+        .case-title {
+            font-size: 1.05rem;
+            color: var(--purple-dark);
+            margin: 0;
+            line-height: 1.3;
+        }
+        .case-friction {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin: 0;
+        }
+        .case-desc {
+            font-size: 0.9rem;
+            color: var(--text);
+            line-height: 1.55;
+            margin: 0;
+        }
+        .case-metrics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: auto;
+        }
+        .metric-pill {
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: var(--purple);
+            color: var(--white);
+            padding: 0.2rem 0.55rem;
+            border-radius: 99px;
+        }
+        .case-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--blue);
+            text-decoration: none;
+            margin-top: 0.25rem;
+        }
+        .case-link:hover { text-decoration: underline; }
+        .view-all-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--purple);
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .view-all-link:hover { border-color: var(--purple); }
+
+        /* ── Capabilities ── */
+        .capabilities-section { background: var(--purple); color: var(--white); }
+        .capabilities-section .section-label { color: rgba(255,255,255,0.6); }
+        .capabilities-section .section-title { color: var(--white); }
+        .capabilities-section .section-divider { background: rgba(255,255,255,0.4); }
+        .cap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+        .cap-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 12px;
+            padding: 1.4rem;
+            transition: background 0.2s;
+        }
+        .cap-card:hover { background: rgba(255,255,255,0.13); }
+        .cap-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.65rem;
+            display: block;
+        }
+        .cap-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--white);
+            margin: 0 0 0.4rem;
+        }
+        .cap-desc {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.55;
+            margin: 0;
         }
 
-        @media (min-width: 768px) {
-            .main-container {
-                padding: 2rem;
-            }
+        /* ── Dual-path CTA / Contact ── */
+        .contact-section { background: var(--white); }
+        .dual-cta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
-
-        /* Mejora de texto responsive */
-        .responsive-text {
+        .cta-track {
+            border-radius: 14px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .cta-track-hiring {
+            background: var(--purple);
+            color: var(--white);
+        }
+        .cta-track-consulting {
+            background: var(--purple-light);
+            border: 1.5px solid var(--border);
+            color: var(--text);
+        }
+        .track-title {
+            font-size: 1.15rem;
+            margin: 0;
+        }
+        .cta-track-hiring .track-title { color: var(--white); }
+        .cta-track-consulting .track-title { color: var(--purple-dark); }
+        .track-desc {
+            font-size: 0.88rem;
             line-height: 1.6;
+            margin: 0;
         }
+        .cta-track-hiring .track-desc { color: rgba(255,255,255,0.85); }
+        .cta-track-consulting .track-desc { color: var(--muted); }
+        .track-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+        .track-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.65rem 1rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: opacity 0.2s, transform 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        .track-btn:hover { opacity: 0.85; transform: translateY(-1px); }
+        .btn-white  { background: var(--white); color: var(--purple); }
+        .btn-ghost-white { background: transparent; border: 1.5px solid rgba(255,255,255,0.5); color: var(--white); }
+        .btn-purple { background: var(--purple); color: var(--white); }
+        .btn-ghost-purple { background: transparent; border: 1.5px solid var(--purple); color: var(--purple); }
 
-        @media (max-width: 768px) {
-            .responsive-text {
-                font-size: 1rem;
-                line-height: 1.5;
-            }
+        /* ── Social quick-links ── */
+        .social-bar {
+            background: var(--bg);
+            padding: 2rem 1.5rem;
+            border-top: 1px solid var(--border);
         }
+        .social-bar-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--muted);
+            text-decoration: none;
+            padding: 0.4rem 0.85rem;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            background: var(--white);
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .social-link:hover { color: var(--purple); border-color: var(--purple); }
+
+        /* ── Footer ── */
+        footer {
+            background: var(--purple-dark);
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-size: 0.8rem;
+        }
+        footer a { color: rgba(255,255,255,0.75); text-decoration: none; }
+        footer a:hover { color: var(--white); }
     </style>
 
     <script type="application/ld+json">
@@ -174,200 +534,432 @@
     "https://www.instagram.com/diegomaury.mx",
     "https://www.tiktok.com/@diegomaury.mx"
   ],
-  "jobTitle": "Gestor de Proyectos e Innovación",
+  "jobTitle": "Strategic Program & Innovation Manager",
+  "description": "Diseño y opero sistemas de innovación: programas, ecosistemas y plataformas de alto impacto.",
   "image": "https://www.diegomaury.mx/dmperfill.svg"
 }
 </script>
-<script src="https://analytics.ahrefs.com/analytics.js" data-key="ZlBRJNkQlWX1uSys6LFetw" async></script>
 </head>
 
-<body class="leading-normal tracking-normal bg-cover bg-fixed min-h-screen flex flex-col" style="background-image: url('header2.svg');">
+<body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2WW6WM"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <div class="flex-grow">
-        <!-- Main content -->
-        <main class="main-container" role="main">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
-                    
-                    <!-- Left Column - Información Personal -->
-                    <section class="flex flex-col w-full lg:w-2/5 text-center lg:text-left" aria-label="Información personal">
-                        <div class="mb-6">
-                            <img src="dmperfill.svg" 
-                                 alt="Diego Maury - Emprendedor y Gestor de Proyectos" 
-                                 class="profile-image rounded-full border-4 border-white shadow-lg 
-                                        hover:scale-105 hover:shadow-xl transition duration-300 mx-auto lg:mx-0"
-                                 loading="eager"
-                                 decoding="async">
-                        </div>
-                        
-                        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold 
-                                   leading-tight mb-4" 
-                            style="color: #4b2672;">
-                            Diego Maury
-                        </h1>
-                        
-                        <p class="text-lg sm:text-xl md:text-2xl mb-6 font-medium" 
-                           style="color: #4b2672;">
-                            Emprendedor. Coordinador. Habilitador.
-                        </p>
+    <!-- ═══════════════════════════════════════
+         NAV — dos rutas visibles
+    ════════════════════════════════════════ -->
+    <nav class="site-nav" role="navigation" aria-label="Navegación principal">
+        <a href="/" class="nav-logo">Diego Maury</a>
+        <button class="nav-hamburger" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+            <svg width="22" height="22" fill="none" stroke="#4b2672" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+                <line x1="3" y1="6" x2="19" y2="6"/>
+                <line x1="3" y1="12" x2="19" y2="12"/>
+                <line x1="3" y1="18" x2="19" y2="18"/>
+            </svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="#proyectos">Proyectos</a>
+            <a href="#capacidades">Capacidades</a>
+            <a href="#contacto">Contacto</a>
+            <a href="https://calendar.notion.so/meet/diegomaurymx/d73c14p5v"
+               target="_blank" rel="noopener noreferrer"
+               class="nav-cta nav-cta-hiring"
+               data-track="nav-cta-hiring">Soy Hiring Manager</a>
+            <a href="#contacto"
+               class="nav-cta nav-cta-consulting"
+               data-track="nav-cta-consulting">Busco Consultoría</a>
+        </div>
+    </nav>
 
-                        <div class="max-w-2xl lg:max-w-none">
-                            <p class="responsive-text text-base sm:text-lg md:text-xl" 
-                               style="color: #4b2672;">
-                                Emprendedor apasionado y comprometido con la innovación y el servicio. 
-                                Coordinador y gestor de proyectos de alto impacto y habilitador de 
-                                entornos de innovación. ¡Hagamos que las cosas pasen!
-                            </p>
-                        </div>
-                    </section>
-
-                    <!-- Right Column - Grid de Enlaces -->
-                    <section class="w-full lg:w-3/5" aria-label="Enlaces profesionales y redes sociales">
-                        <nav class="icon-grid" aria-label="Navegación de redes sociales y servicios">
-                            <a href="https://diegomaury.notion.site/portfolio?pvs=4" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
-                               aria-label="Ver curriculum y portafolio de Diego Maury">
-                                <img src="Read.cv.webp" 
-                                     alt="Curriculum y Portafolio"
-                                     loading="lazy"
-                                     decoding="async">
-                            </a>
-                            
-                            <a href="https://calendar.notion.so/meet/diegomaurymx/d73c14p5v" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
-                               aria-label="Agendar una reunión con Diego Maury">
-                                <img src="1.webp" 
-                                     alt="Calendario de Reservas"
-                                     loading="lazy"
-                                     decoding="async">
-                            </a>
-                            
-                            <a href="mailto:dm@diegomaury.mx" 
-                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
-                               aria-label="Enviar email a Diego Maury">
-                                <img src="Email.webp" 
-                                     alt="Contacto por Email"
-                                     loading="lazy"
-                                     decoding="async">
-                            </a>
-                            
-                            <a href="https://diegomaury.notion.site/Ponencias-y-Talleres-2025-349c84ac67844da695b3b5fbd9e6d853?pvs=4" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
-                               aria-label="Ver conferencias y talleres disponibles">
-                                <img src="Conferencias y Talleres.webp" 
-                                     alt="Conferencias y Talleres"
-                                     loading="lazy"
-                                     decoding="async">
-                            </a>
-                            
-                            <a href="https://diegomaury.substack.com/" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
-                               aria-label="Leer el blog de Diego Maury en Substack">
-                                <img src="diegomaury substack blog.svg" 
-                                     alt="Blog en Substack"
-                                     loading="lazy"
-                                     decoding="async">
-                            </a>
-                            
-                            <a href="https://senja.io/p/diegomaury/9awUK8" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
-                               aria-label="Ver testimonios y comentarios sobre Diego Maury">
-                                <img src="2.webp" 
-                                     alt="Testimonios y Comentarios"
-                                     loading="lazy"
-                                     decoding="async">
-                            </a>
-                            
-                            <a href="https://www.linkedin.com/in/diegomaury" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
-                               aria-label="Conectar con Diego Maury en LinkedIn">
-                                <img src="LinkedIn.webp" 
-                                     alt="Perfil de LinkedIn"
-                                     loading="lazy"
-                                     decoding="async">
-                            </a>
-                            
-                            <a href="https://buymeacoffee.com/diegomaury.mx" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
-                               aria-label="Apoyar a Diego Maury comprando un café">
-                                <img src="Buy me a coffee.webp" 
-                                     alt="Buy Me a Coffee"
-                                     loading="lazy"
-                                     decoding="async">
-                            </a>
-                            
-                            <a href="https://www.instagram.com/diegomaury.mx" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
-                               aria-label="Seguir a Diego Maury en Instagram">
-                                <img src="Instagram.webp" 
-                                     alt="Perfil de Instagram"
-                                     loading="lazy"
-                                     decoding="async">
-                            </a>
-                            
-                            <a href="https://www.tiktok.com/@diegomaury.mx" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="block focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
-                               aria-label="Seguir a Diego Maury en TikTok">
-                                <img src="TikTok.webp" 
-                                     alt="Perfil de TikTok"
-                                     loading="lazy"
-                                     decoding="async">
-                            </a>
-                        </nav>
-                    </section>
+    <!-- ═══════════════════════════════════════
+         HERO — header morado (~18 % visible)
+    ════════════════════════════════════════ -->
+    <section class="hero" aria-label="Presentación">
+        <div class="hero-inner">
+            <img src="dmperfill.svg"
+                 alt="Diego Maury"
+                 class="hero-avatar"
+                 loading="eager"
+                 decoding="async">
+            <h1 class="hero-name">Diego Maury</h1>
+            <p class="hero-role">Strategic Program &amp; Innovation Manager · Innovation Systems Builder</p>
+            <p class="hero-statement headline">
+                "No describo puestos. Demuestro sistemas construidos: programas, ecosistemas y plataformas que generan impacto medible."
+            </p>
+            <div class="hero-ctas">
+                <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;">
+                    <span class="track-label track-hiring-label">Hiring Managers</span>
+                    <a href="https://diegomaury.notion.site/portfolio?pvs=4"
+                       target="_blank" rel="noopener noreferrer"
+                       class="cta-btn cta-hiring"
+                       data-track="hero-cta-hiring">
+                        Ver portafolio completo →
+                    </a>
+                </div>
+                <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;">
+                    <span class="track-label track-consulting-label">Consultoría</span>
+                    <a href="#contacto"
+                       class="cta-btn cta-consulting"
+                       data-track="hero-cta-consulting">
+                        Hablemos de tu proyecto →
+                    </a>
                 </div>
             </div>
-        </main>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         STATEMENT PROFESIONAL
+    ════════════════════════════════════════ -->
+    <section class="statement-section" aria-labelledby="statement-heading">
+        <div class="section-inner">
+            <span class="section-label">Propuesta de valor</span>
+            <div class="section-divider"></div>
+            <blockquote class="statement-quote">
+                Construyo los sistemas operativos de la innovación: los programas, procesos y ecosistemas que permiten que las ideas pasen del concepto al impacto.
+            </blockquote>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h4>Programas de innovación</h4>
+                    <p>Diseño y operación end-to-end de programas de innovación corporativa y pública.</p>
+                </div>
+                <div class="problem-card">
+                    <h4>Ecosistemas &amp; comunidades</h4>
+                    <p>Construcción de redes de actores (startups, mentores, corporativos, academia) con lógica de sistema.</p>
+                </div>
+                <div class="problem-card">
+                    <h4>Operación de plataformas</h4>
+                    <p>Gestión operativa de programas tecnológicos, aceleradoras y hubs de innovación.</p>
+                </div>
+                <div class="problem-card">
+                    <h4>Estrategia de startups</h4>
+                    <p>Acompañamiento estratégico y operativo para startups en etapa temprana y crecimiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         PROYECTOS CLAVE / CASE STUDIES
+    ════════════════════════════════════════ -->
+    <section class="projects-section" id="proyectos" aria-labelledby="proyectos-heading">
+        <div class="section-inner">
+            <span class="section-label">Evidencia de sistemas construidos</span>
+            <h2 class="section-title" id="proyectos-heading">Proyectos Clave</h2>
+            <div class="section-divider"></div>
+            <p style="color:var(--muted);font-size:0.9rem;margin:0 0 0.5rem;">
+                Cada caso documenta la fricción inicial, el sistema diseñado, la arquitectura del programa y los resultados obtenidos.
+            </p>
+
+            <div class="cases-grid">
+
+                <!-- Case 1 -->
+                <article class="case-card">
+                    <span class="case-tag">Hackatón · Ecosistema</span>
+                    <h3 class="case-title">HackSureste</h3>
+                    <p class="case-friction">Fricción: baja cultura de innovación en el sureste de México</p>
+                    <p class="case-desc">
+                        Diseño y operación de un hackatón regional que conectó talento, mentores y empresas para co-crear soluciones a retos locales. Programa con lógica de sistema: convocatoria, selección, mentoría, demo day y seguimiento.
+                    </p>
+                    <div class="case-metrics">
+                        <span class="metric-pill">+200 participantes</span>
+                        <span class="metric-pill">Ecosistema regional</span>
+                        <span class="metric-pill">Alianzas multiactor</span>
+                    </div>
+                    <a href="https://diegomaury.notion.site/portfolio?pvs=4"
+                       target="_blank" rel="noopener noreferrer"
+                       class="case-link"
+                       data-track="case-hacksureste">
+                        Ver caso completo →
+                    </a>
+                </article>
+
+                <!-- Case 2 -->
+                <article class="case-card">
+                    <span class="case-tag">Retos · Aceleración</span>
+                    <h3 class="case-title">Redux + INCmty Challenges</h3>
+                    <p class="case-friction">Fricción: corporativos sin canal para conectar con startups</p>
+                    <p class="case-desc">
+                        Arquitectura y operación de programas de retos de innovación abierta. Sistema que integra definición de retos, matchmaking corporativo-startup, pitching y acuerdos comerciales.
+                    </p>
+                    <div class="case-metrics">
+                        <span class="metric-pill">Retos corporativos</span>
+                        <span class="metric-pill">Pipeline de startups</span>
+                        <span class="metric-pill">Acuerdos B2B</span>
+                    </div>
+                    <a href="https://diegomaury.notion.site/portfolio?pvs=4"
+                       target="_blank" rel="noopener noreferrer"
+                       class="case-link"
+                       data-track="case-incmty">
+                        Ver caso completo →
+                    </a>
+                </article>
+
+                <!-- Case 3 -->
+                <article class="case-card">
+                    <span class="case-tag">Programa · Transformación</span>
+                    <h3 class="case-title">Programas de Innovación Corporativa</h3>
+                    <p class="case-friction">Fricción: organizaciones con activos de innovación desconectados</p>
+                    <p class="case-desc">
+                        Diseño del sistema operativo de programas de innovación: metodología, flujos, herramientas, KPIs y modelo de gobernanza para que la innovación deje de ser evento y se convierta en capacidad organizacional.
+                    </p>
+                    <div class="case-metrics">
+                        <span class="metric-pill">Sistema operativo</span>
+                        <span class="metric-pill">KPIs definidos</span>
+                        <span class="metric-pill">Capacidad instalada</span>
+                    </div>
+                    <a href="https://diegomaury.notion.site/portfolio?pvs=4"
+                       target="_blank" rel="noopener noreferrer"
+                       class="case-link"
+                       data-track="case-corp-innovation">
+                        Ver caso completo →
+                    </a>
+                </article>
+
+                <!-- Case 4 -->
+                <article class="case-card">
+                    <span class="case-tag">Operación · Plataforma</span>
+                    <h3 class="case-title">Operación de Programas Tecnológicos</h3>
+                    <p class="case-friction">Fricción: programas tech sin estructura operativa escalable</p>
+                    <p class="case-desc">
+                        Gestión operativa de programas de tecnología e innovación: diseño de procesos, tableros de control, automatizaciones y stack de herramientas para equipos distribuidos.
+                    </p>
+                    <div class="case-metrics">
+                        <span class="metric-pill">Procesos documentados</span>
+                        <span class="metric-pill">Automatizaciones</span>
+                        <span class="metric-pill">Equipo distribuido</span>
+                    </div>
+                    <a href="https://diegomaury.notion.site/portfolio?pvs=4"
+                       target="_blank" rel="noopener noreferrer"
+                       class="case-link"
+                       data-track="case-tech-ops">
+                        Ver caso completo →
+                    </a>
+                </article>
+
+            </div>
+
+            <a href="https://diegomaury.notion.site/portfolio?pvs=4"
+               target="_blank" rel="noopener noreferrer"
+               class="view-all-link"
+               data-track="all-cases-cta">
+                Ver todos los proyectos en el portafolio completo →
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CAPACIDADES / CÓMO TRABAJO
+    ════════════════════════════════════════ -->
+    <section class="capabilities-section" id="capacidades" aria-labelledby="capacidades-heading">
+        <div class="section-inner">
+            <span class="section-label">Cómo trabajo</span>
+            <h2 class="section-title" id="capacidades-heading">Capacidades</h2>
+            <div class="section-divider"></div>
+            <div class="cap-grid">
+
+                <div class="cap-card">
+                    <span class="cap-icon" aria-hidden="true">🏗️</span>
+                    <h3 class="cap-title">Program Architecture</h3>
+                    <p class="cap-desc">Diseño la estructura lógica de programas de innovación: fases, hitos, metodología, roles y sistemas de medición desde cero o mejorando los existentes.</p>
+                </div>
+
+                <div class="cap-card">
+                    <span class="cap-icon" aria-hidden="true">🌐</span>
+                    <h3 class="cap-title">Ecosystem Building</h3>
+                    <p class="cap-desc">Articulación de actores heterogéneos (corporativos, startups, gobierno, academia) en torno a objetivos comunes con incentivos claros.</p>
+                </div>
+
+                <div class="cap-card">
+                    <span class="cap-icon" aria-hidden="true">🚀</span>
+                    <h3 class="cap-title">Startup Support</h3>
+                    <p class="cap-desc">Acompañamiento estratégico y operativo a startups: desde la validación del modelo hasta la estructuración de operaciones y el pitch a inversionistas.</p>
+                </div>
+
+                <div class="cap-card">
+                    <span class="cap-icon" aria-hidden="true">⚙️</span>
+                    <h3 class="cap-title">Digital Program Operations</h3>
+                    <p class="cap-desc">Construcción del stack operativo de programas: herramientas, flujos, automatizaciones y dashboards para equipos que necesitan operar con claridad y velocidad.</p>
+                </div>
+
+                <div class="cap-card">
+                    <span class="cap-icon" aria-hidden="true">📊</span>
+                    <h3 class="cap-title">Aceleración &amp; Retos</h3>
+                    <p class="cap-desc">Diseño y operación de programas de aceleración, retos de innovación abierta y hackatones con impacto medible en startups y corporativos.</p>
+                </div>
+
+                <div class="cap-card">
+                    <span class="cap-icon" aria-hidden="true">🎤</span>
+                    <h3 class="cap-title">Ponencias &amp; Talleres</h3>
+                    <p class="cap-desc">Sesiones de formación y conferencias sobre innovación, emprendimiento, ecosistemas y herramientas de productividad para equipos y comunidades.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CONTACTO — DUAL-PATH CTA
+    ════════════════════════════════════════ -->
+    <section class="contact-section" id="contacto" aria-labelledby="contacto-heading">
+        <div class="section-inner">
+            <span class="section-label">Colaboremos</span>
+            <h2 class="section-title" id="contacto-heading">¿Cómo puedo ayudarte?</h2>
+            <div class="section-divider"></div>
+            <div class="dual-cta-grid">
+
+                <!-- Track A: Hiring Managers -->
+                <div class="cta-track cta-track-hiring" role="region" aria-label="Track para Hiring Managers">
+                    <span class="track-label track-hiring-label" style="align-self:flex-start;">Hiring Manager</span>
+                    <h3 class="track-title">Busco un rol estratégico</h3>
+                    <p class="track-desc">
+                        Estoy abierto a oportunidades como Strategic Program Manager, Head of Innovation o roles de liderazgo en programas de innovación y tecnología.
+                    </p>
+                    <div class="track-actions">
+                        <a href="https://diegomaury.notion.site/portfolio?pvs=4"
+                           target="_blank" rel="noopener noreferrer"
+                           class="track-btn btn-white"
+                           data-track="contact-hiring-portfolio">
+                            📄 Ver portafolio completo
+                        </a>
+                        <a href="https://calendar.notion.so/meet/diegomaurymx/d73c14p5v"
+                           target="_blank" rel="noopener noreferrer"
+                           class="track-btn btn-ghost-white"
+                           data-track="contact-hiring-calendar">
+                            📅 Agendar llamada de 30 min
+                        </a>
+                        <a href="https://www.linkedin.com/in/diegomaury"
+                           target="_blank" rel="noopener noreferrer"
+                           class="track-btn btn-ghost-white"
+                           data-track="contact-hiring-linkedin">
+                            💼 LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Track B: Consulting clients -->
+                <div class="cta-track cta-track-consulting" role="region" aria-label="Track para clientes de consultoría">
+                    <span class="track-label" style="background:var(--purple-light);color:var(--purple);align-self:flex-start;">Consultoría</span>
+                    <h3 class="track-title">Necesito un sistema de innovación</h3>
+                    <p class="track-desc">
+                        Trabajo con organizaciones que quieren diseñar o escalar programas de innovación, ecosistemas y operaciones de startup.
+                    </p>
+                    <div class="track-actions">
+                        <a href="mailto:dm@diegomaury.mx?subject=Consultoría%20de%20innovación"
+                           class="track-btn btn-purple"
+                           data-track="contact-consulting-email">
+                            ✉️ Enviar propuesta por email
+                        </a>
+                        <a href="https://calendar.notion.so/meet/diegomaurymx/d73c14p5v"
+                           target="_blank" rel="noopener noreferrer"
+                           class="track-btn btn-ghost-purple"
+                           data-track="contact-consulting-calendar">
+                            📅 Agendar discovery call
+                        </a>
+                        <a href="https://diegomaury.notion.site/Ponencias-y-Talleres-2025-349c84ac67844da695b3b5fbd9e6d853?pvs=4"
+                           target="_blank" rel="noopener noreferrer"
+                           class="track-btn btn-ghost-purple"
+                           data-track="contact-consulting-ponencias">
+                            🎤 Ver ponencias y talleres
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SOCIAL / LINKS RÁPIDOS
+    ════════════════════════════════════════ -->
+    <div class="social-bar" role="complementary" aria-label="Redes sociales y recursos adicionales">
+        <div class="social-bar-inner">
+            <a href="https://diegomaury.substack.com/"
+               target="_blank" rel="noopener noreferrer"
+               class="social-link"
+               data-track="social-substack">
+                ✍️ Substack
+            </a>
+            <a href="https://senja.io/p/diegomaury/9awUK8"
+               target="_blank" rel="noopener noreferrer"
+               class="social-link"
+               data-track="social-testimonials">
+                ⭐ Testimonios
+            </a>
+            <a href="https://www.instagram.com/diegomaury.mx"
+               target="_blank" rel="noopener noreferrer"
+               class="social-link"
+               data-track="social-instagram">
+                📸 Instagram
+            </a>
+            <a href="https://www.tiktok.com/@diegomaury.mx"
+               target="_blank" rel="noopener noreferrer"
+               class="social-link"
+               data-track="social-tiktok">
+                🎵 TikTok
+            </a>
+            <a href="https://buymeacoffee.com/diegomaury.mx"
+               target="_blank" rel="noopener noreferrer"
+               class="social-link"
+               data-track="social-coffee">
+                ☕ Buy Me a Coffee
+            </a>
+            <a href="https://www.facebook.com/diegomaury.mx"
+               target="_blank" rel="noopener noreferrer"
+               class="social-link"
+               data-track="social-facebook">
+                📘 Facebook
+            </a>
+        </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-transparent w-full max-w-7xl mx-auto text-center py-4 mt-4 px-4">
-        <p class="text-sm sm:text-base mb-2" style="color: #4b2672;">
-            Página hecha con mucho pasión y ChatGPT.
-        </p>
-        <p class="text-xs sm:text-sm" style="color: #4b2672;">
-            © <span id="currentYear"></span> DIEGO SONDHEIM LUPONE SAS. Todos los derechos reservados.
+    <!-- ═══════════════════════════════════════
+         FOOTER
+    ════════════════════════════════════════ -->
+    <footer role="contentinfo">
+        <p>
+            © <span id="currentYear"></span> Diego Maury /
+            <a href="mailto:dm@diegomaury.mx">dm@diegomaury.mx</a> ·
+            Página hecha con pasión y código.
         </p>
     </footer>
 
     <script>
-        // Obtener el año actual y actualizar el contenido del span
+        // Año dinámico
         document.getElementById("currentYear").textContent = new Date().getFullYear();
-        
-        // Mejorar performance de hover en dispositivos táctiles
-        if ('ontouchstart' in window) {
-            document.querySelectorAll('.icon-grid a').forEach(link => {
-                link.addEventListener('touchstart', function() {
-                    this.style.transform = 'scale(1.05)';
-                }, {passive: true});
-                
-                link.addEventListener('touchend', function() {
-                    this.style.transform = 'scale(1)';
-                }, {passive: true});
+
+        // Menú móvil
+        const toggle = document.getElementById("navToggle");
+        const links  = document.getElementById("navLinks");
+        toggle.addEventListener("click", function () {
+            const open = links.classList.toggle("open");
+            toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+        // Cerrar menú al hacer clic en un enlace
+        links.querySelectorAll("a").forEach(function (a) {
+            a.addEventListener("click", function () {
+                links.classList.remove("open");
+                toggle.setAttribute("aria-expanded", "false");
             });
-        }
+        });
+
+        // GTM event tracking para los dos funnels
+        document.querySelectorAll("[data-track]").forEach(function (el) {
+            el.addEventListener("click", function () {
+                const track = this.getAttribute("data-track");
+                const funnel = track.indexOf("hiring") !== -1 ? "hiring" :
+                             track.indexOf("consulting") !== -1 ? "consulting" : "general";
+                if (window.dataLayer) {
+                    window.dataLayer.push({
+                        event: "portfolio_cta_click",
+                        cta_id: track,
+                        funnel: funnel
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>
