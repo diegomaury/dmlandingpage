@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacidades — Diego Maury</title>
+    <meta name="description" content="Capacidades de Diego Maury: cómo diseña y opera sistemas de innovación, programas de aceleración, ecosistemas y operaciones digitales.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.diegomaury.mx/capacidades/">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N2WW6WM');</script>
+    <!-- End Google Tag Manager -->
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital@1&family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="ZlBRJNkQlWX1uSys6LFetw" async></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        :root {
+            --purple:       #4b2672;
+            --purple-dark:  #36185a;
+            --purple-light: #f3eeff;
+            --blue:         #246BFD;
+            --text:         #1a1225;
+            --muted:        #6b7280;
+            --bg:           #f8f7fc;
+            --white:        #ffffff;
+            --border:       #e5e0f0;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; }
+        h1,h2,h3,h4 { font-family: 'Outfit', sans-serif; font-weight: 700; }
+
+        /* Nav */
+        .site-nav {
+            position: sticky; top: 0; z-index: 50;
+            background: var(--white); border-bottom: 1px solid var(--border);
+            padding: 0 1.5rem; display: flex; align-items: center;
+            justify-content: space-between; height: 56px;
+        }
+        .nav-logo { font-family: 'Outfit',sans-serif; font-weight: 700; color: var(--purple); font-size: 1.1rem; text-decoration: none; }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--purple); }
+        @media (max-width: 640px) { .nav-links .hide-sm { display: none; } }
+
+        /* Page header */
+        .page-header { background: var(--purple); color: var(--white); padding: 3rem 1.5rem 2.5rem; }
+        .page-header-inner { max-width: 900px; margin: 0 auto; }
+        .breadcrumb { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-bottom: 0.75rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--white); }
+        .page-title { font-size: clamp(1.75rem,4vw,2.5rem); margin: 0 0 0.75rem; color: var(--white); line-height: 1.15; }
+        .page-subtitle { font-size: 1rem; color: rgba(255,255,255,0.8); max-width: 580px; line-height: 1.65; margin: 0; }
+
+        /* Positioning statement */
+        .positioning { background: var(--white); padding: 2.5rem 1.5rem; border-bottom: 1px solid var(--border); }
+        .positioning-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 1.5rem; }
+        .positioning-card {
+            border-left: 3px solid var(--purple); padding: 0.5rem 0 0.5rem 1rem;
+        }
+        .positioning-card h3 { font-size: 1rem; color: var(--purple); margin: 0 0 0.3rem; }
+        .positioning-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.55; margin: 0; }
+
+        /* Section base */
+        .section { padding: 3.5rem 1.5rem; }
+        .section-inner { max-width: 900px; margin: 0 auto; }
+        .section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--purple); display: block; margin-bottom: 0.5rem; }
+        .section-title { font-size: clamp(1.4rem,3.5vw,1.9rem); color: var(--purple); margin: 0 0 0.75rem; }
+        .section-divider { width: 40px; height: 3px; background: var(--purple); margin: 0 0 1.5rem; border-radius: 2px; }
+
+        /* Capability detail cards */
+        .cap-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px,1fr)); gap: 1.5rem; }
+        .cap-card {
+            background: var(--white); border: 1px solid var(--border); border-radius: 14px;
+            padding: 1.6rem; display: flex; flex-direction: column; gap: 0.75rem;
+            transition: box-shadow 0.25s, transform 0.25s;
+        }
+        .cap-card:hover { box-shadow: 0 6px 24px rgba(75,38,114,0.12); transform: translateY(-2px); }
+        .cap-icon { font-size: 2rem; }
+        .cap-title { font-size: 1.05rem; color: var(--purple-dark); margin: 0; }
+        .cap-desc { font-size: 0.88rem; color: var(--text); line-height: 1.6; margin: 0; }
+        .cap-deliverables { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
+        .cap-deliverables li {
+            font-size: 0.8rem; color: var(--muted); padding-left: 1rem; position: relative;
+        }
+        .cap-deliverables li::before { content: "→"; position: absolute; left: 0; color: var(--purple); font-weight: 600; }
+
+        /* Process section */
+        .process-section { background: var(--purple); }
+        .process-section .section-label { color: rgba(255,255,255,0.6); }
+        .process-section .section-title { color: var(--white); }
+        .process-section .section-divider { background: rgba(255,255,255,0.35); }
+        .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 1rem; margin-top: 1.5rem; }
+        .process-step {
+            background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 10px; padding: 1.25rem; text-align: center;
+        }
+        .step-number { font-size: 2rem; font-weight: 800; color: rgba(255,255,255,0.25); line-height: 1; font-family: 'Outfit',sans-serif; }
+        .step-title { font-size: 0.9rem; font-weight: 700; color: var(--white); margin: 0.4rem 0 0.3rem; }
+        .step-desc { font-size: 0.78rem; color: rgba(255,255,255,0.7); line-height: 1.5; margin: 0; }
+
+        /* Tools section */
+        .tools-section { background: var(--bg); }
+        .tools-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+        .tool-chip {
+            display: inline-flex; align-items: center; gap: 0.35rem;
+            font-size: 0.8rem; font-weight: 500; padding: 0.4rem 0.85rem;
+            border-radius: 99px; border: 1.5px solid var(--border);
+            background: var(--white); color: var(--text);
+        }
+
+        /* CTA */
+        .page-cta { background: var(--white); padding: 3rem 1.5rem; text-align: center; border-top: 1px solid var(--border); }
+        .page-cta h2 { font-size: 1.5rem; color: var(--purple); margin: 0 0 0.75rem; }
+        .page-cta p { color: var(--muted); font-size: 0.95rem; margin: 0 0 1.5rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+        .cta-btns { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+        .cta-btn {
+            padding: 0.7rem 1.4rem; border-radius: 8px; font-size: 0.9rem; font-weight: 600;
+            text-decoration: none; transition: opacity 0.2s, transform 0.2s;
+        }
+        .cta-btn:hover { opacity: 0.85; transform: translateY(-1px); }
+        .btn-purple { background: var(--purple); color: var(--white); }
+        .btn-ghost-purple { background: transparent; border: 2px solid var(--purple); color: var(--purple); }
+
+        /* Footer */
+        footer { background: var(--purple-dark); color: rgba(255,255,255,0.6); text-align: center; padding: 1.25rem 1rem; font-size: 0.8rem; }
+        footer a { color: rgba(255,255,255,0.75); text-decoration: none; }
+        footer a:hover { color: var(--white); }
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2WW6WM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- NAV -->
+    <nav class="site-nav" role="navigation" aria-label="Navegación principal">
+        <a href="/" class="nav-logo">Diego Maury</a>
+        <div class="nav-links">
+            <a href="/" class="hide-sm">Inicio</a>
+            <a href="/proyectos/" class="hide-sm">Proyectos</a>
+            <a href="/capacidades/" aria-current="page">Capacidades</a>
+            <a href="/#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <div class="page-header-inner">
+            <p class="breadcrumb"><a href="/">Inicio</a> / Capacidades</p>
+            <h1 class="page-title">Capacidades</h1>
+            <p class="page-subtitle">
+                Lo que sé construir: sistemas operativos para la innovación. No solo gestiono proyectos — diseño los mecanismos que hacen que los programas, ecosistemas y plataformas funcionen de forma sostenible.
+            </p>
+        </div>
+    </header>
+
+    <!-- POSITIONING -->
+    <div class="positioning">
+        <div class="positioning-inner">
+            <div class="positioning-card">
+                <h3>Strategic Program Manager</h3>
+                <p>Diseño la estructura y el sistema operativo de programas complejos con múltiples actores, fases e indicadores.</p>
+            </div>
+            <div class="positioning-card">
+                <h3>Innovation Systems Builder</h3>
+                <p>Construyo los mecanismos —procesos, flujos, herramientas— que permiten que la innovación escale y se sostenga en el tiempo.</p>
+            </div>
+            <div class="positioning-card">
+                <h3>Ecosystem Architect</h3>
+                <p>Articulación de redes de actores heterogéneos con incentivos, programas de conexión y métricas de red.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CORE CAPABILITIES -->
+    <section class="section" style="background: var(--bg);" aria-labelledby="caps-heading">
+        <div class="section-inner">
+            <span class="section-label">Qué sé construir</span>
+            <h2 class="section-title" id="caps-heading">Capacidades Core</h2>
+            <div class="section-divider"></div>
+            <div class="cap-grid">
+
+                <div class="cap-card">
+                    <span class="cap-icon" aria-hidden="true">🏗️</span>
+                    <h3 class="cap-title">Program Architecture</h3>
+                    <p class="cap-desc">Diseño la estructura lógica de programas de innovación: fases, hitos, metodología, roles y sistemas de medición.</p>
+                    <ul class="cap-deliverables" aria-label="Entregables">
+                        <li>Diseño de programa (fases, hitos, KPIs)</li>
+                        <li>Playbook operativo del programa</li>
+                        <li>Modelo de gobernanza y toma de decisiones</li>
+                        <li>Sistema de medición y reporting</li>
+                    </ul>
+                </div>
+
+                <div class="cap-card">
+                    <span class="cap-icon" aria-hidden="true">🌐</span>
+                    <h3 class="cap-title">Ecosystem Building</h3>
+                    <p class="cap-desc">Articulación de actores heterogéneos (corporativos, startups, gobierno, academia) en torno a objetivos comunes.</p>
+                    <ul class="cap-deliverables" aria-label="Entregables">
+                        <li>Mapeo y segmentación de actores</li>
+                        <li>Diseño de flujos de valor entre actores</li>
+                        <li>Programas de conexión y activación</li>
+                        <li>Métricas de salud del ecosistema</li>
+                    </ul>
+                </div>
+
+                <div class="cap-card">
+                    <span class="cap-icon" aria-hidden="true">🚀</span>
+                    <h3 class="cap-title">Startup Support</h3>
+                    <p class="cap-desc">Acompañamiento estratégico y operativo a startups: desde la validación del modelo hasta la estructuración de operaciones.</p>
+                    <ul class="cap-deliverables" aria-label="Entregables">
+                        <li>Diagnóstico estratégico y operativo</li>
+                        <li>Diseño del modelo de negocio</li>
+                        <li>Preparación para levantamiento de capital</li>
+                        <li>Estructura operativa escalable</li>
+                    </ul>
+                </div>
+
+                <div class="cap-card">
+                    <span class="cap-icon" aria-hidden="true">⚙️</span>
+                    <h3 class="cap-title">Digital Program Operations</h3>
+                    <p class="cap-desc">Construcción del stack operativo de programas: herramientas, flujos, automatizaciones y dashboards para equipos distribuidos.</p>
+                    <ul class="cap-deliverables" aria-label="Entregables">
+                        <li>Stack de herramientas documentado</li>
+                        <li>Flujos automatizados (Notion, Zapier)</li>
+                        <li>Dashboard de gestión del programa</li>
+                        <li>Procesos documentados y replicables</li>
+                    </ul>
+                </div>
+
+                <div class="cap-card">
+                    <span class="cap-icon" aria-hidden="true">📊</span>
+                    <h3 class="cap-title">Aceleración &amp; Retos de Innovación</h3>
+                    <p class="cap-desc">Diseño y operación de programas de aceleración, retos de innovación abierta y hackatones con impacto medible.</p>
+                    <ul class="cap-deliverables" aria-label="Entregables">
+                        <li>Diseño de convocatoria y selección</li>
+                        <li>Gestión de cohortes y mentores</li>
+                        <li>Demo Day y seguimiento post-programa</li>
+                        <li>Retos corporativos y matchmaking</li>
+                    </ul>
+                </div>
+
+                <div class="cap-card">
+                    <span class="cap-icon" aria-hidden="true">🎤</span>
+                    <h3 class="cap-title">Ponencias &amp; Formación</h3>
+                    <p class="cap-desc">Sesiones de formación y conferencias sobre innovación, emprendimiento, ecosistemas y herramientas de productividad.</p>
+                    <ul class="cap-deliverables" aria-label="Entregables">
+                        <li>Keynotes sobre innovación y ecosistemas</li>
+                        <li>Talleres de design thinking y metodología</li>
+                        <li>Sesiones de productividad con Notion</li>
+                        <li>Formación para equipos de innovación</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section process-section" aria-labelledby="process-heading">
+        <div class="section-inner">
+            <span class="section-label">Cómo trabajo</span>
+            <h2 class="section-title" id="process-heading">Mi proceso de trabajo</h2>
+            <div class="section-divider"></div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Diagnóstico</h3>
+                    <p class="step-desc">Mapeo la situación actual: actores, fricción principal, activos disponibles y contexto organizacional.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Diseño del sistema</h3>
+                    <p class="step-desc">Defino la arquitectura: fases, roles, flujos de valor, herramientas y métricas de éxito.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Prototipo rápido</h3>
+                    <p class="step-desc">Construyo una versión mínima del sistema para validar supuestos antes de escalar.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">Operación</h3>
+                    <p class="step-desc">Ejecuto el programa con dashboards de control, rituales de equipo y ciclos de mejora continua.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <h3 class="step-title">Capacidad instalada</h3>
+                    <p class="step-desc">Transfiero el sistema a tu equipo con documentación, playbooks y formación para que sea sostenible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section class="section tools-section" aria-labelledby="tools-heading">
+        <div class="section-inner">
+            <span class="section-label">Stack</span>
+            <h2 class="section-title" id="tools-heading">Herramientas &amp; Stack</h2>
+            <div class="section-divider"></div>
+            <div class="tools-grid">
+                <span class="tool-chip">🗒️ Notion</span>
+                <span class="tool-chip">📋 Airtable</span>
+                <span class="tool-chip">⚡ Zapier</span>
+                <span class="tool-chip">📊 Google Workspace</span>
+                <span class="tool-chip">📐 Miro / FigJam</span>
+                <span class="tool-chip">📅 Calendly / Notion Calendar</span>
+                <span class="tool-chip">📈 Google Analytics / GTM</span>
+                <span class="tool-chip">🎨 Canva / Figma</span>
+                <span class="tool-chip">💬 Slack / Discord</span>
+                <span class="tool-chip">🤖 ChatGPT / Claude</span>
+                <span class="tool-chip">📧 Mailchimp / Brevo</span>
+                <span class="tool-chip">🌐 Webflow / Notion Sites</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="page-cta" role="complementary">
+        <h2>¿Necesitas estas capacidades en tu organización?</h2>
+        <p>Hablemos de tu proyecto. Ofrezco consultoría, diseño de programas y acompañamiento operativo.</p>
+        <div class="cta-btns">
+            <a href="https://calendar.notion.so/meet/diegomaurymx/d73c14p5v"
+               target="_blank" rel="noopener noreferrer"
+               class="cta-btn btn-purple"
+               data-track="capacidades-cta-calendar">
+                📅 Agendar discovery call
+            </a>
+            <a href="mailto:dm@diegomaury.mx?subject=Consultoría%20de%20innovación"
+               class="cta-btn btn-ghost-purple"
+               data-track="capacidades-cta-email">
+                ✉️ Enviar propuesta
+            </a>
+        </div>
+    </div>
+
+    <footer role="contentinfo">
+        <p>© <span id="currentYear"></span> Diego Maury · <a href="mailto:dm@diegomaury.mx">dm@diegomaury.mx</a> · <a href="/">Inicio</a></p>
+    </footer>
+
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+        document.querySelectorAll("[data-track]").forEach(function(el) {
+            el.addEventListener("click", function() {
+                if (window.dataLayer) {
+                    window.dataLayer.push({
+                        event: "portfolio_cta_click",
+                        cta_id: this.getAttribute("data-track"),
+                        funnel: this.getAttribute("data-track").indexOf("hiring") !== -1 ? "hiring" : "consulting"
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
